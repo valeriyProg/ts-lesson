@@ -1,8 +1,9 @@
-export interface Item<T> {
+export interface Gift {
   name: string;
   brand: string;
   price: number;
   img: string;
   weight: number;
-  bag?: T;
+  discount?: number | null;
+  mix?: Candy[] | null;
 }
