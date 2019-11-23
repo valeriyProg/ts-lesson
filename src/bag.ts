@@ -30,25 +30,33 @@ export class Bag extends Product implements IBag {
     return this._brand;
   }
   get weight(): number {
-    return this.__weight;
+    return this._weight;
   }
   get price(): number {
-    return this.__price;
+    return this._price;
   }
   get discount(): number {
-    return this.__discount;
+    return this._discount;
   }
   get mix(): ICandy[] {
     return this._mix;
   }
   toString(): string {
+    let mix: string = "";
+    this._mix.forEach((element, index) => {
+      mix += `Item: #${index}; 
+              Name: ${emelement.name};
+              Brand: ${emelement.brand};
+              Price:${emelement.price}; \n`;
+    });
     return `id: ${this.id};
      img: ${this.img}; 
      name: ${this.name}; 
      brand:${this.brand}; 
      weight: ${this.weight}; 
      price:${this.price};
-     discount:${this.discount};`;
+     discount:${this.discount};
+     mux: ${mix}`;
   }
 }
 

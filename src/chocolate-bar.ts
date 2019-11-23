@@ -12,7 +12,6 @@ export class ChocolateBar extends Product {
     discount: number | null = 0
   ) {
     super(id, name, img, brand, weight, price, discount);
-    this._mix = mix;
   }
 
   get id(): string {
@@ -28,13 +27,13 @@ export class ChocolateBar extends Product {
     return this._brand;
   }
   get weight(): number {
-    return this.__weight;
+    return this._weight;
   }
   get price(): number {
-    return this.__price;
+    return this._price;
   }
   get discount(): number {
-    return this.__discount;
+    return this._discount;
   }
   toString(): string {
     return `id: ${this.id};

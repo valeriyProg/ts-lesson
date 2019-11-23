@@ -7,7 +7,7 @@ export abstract class Product implements IGift {
     protected _price: number,
     protected _img: string,
     protected _weight: number,
-    protected _discount: number | null
+    protected _discount: number | null = null
   ) {}
   abstract toString(): string;
 }
