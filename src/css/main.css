@@ -65,76 +65,71 @@ body {
 /* PRODUCT TABLE  */
 .product-table {
   border-collapse: collapse;
-  border-spacing: 0;
-  empty-cells: show;
+  margin: 30px;
+  width: 100%;
 }
-thead tr {
+
+.product-table thead tr {
   background-color: #fcf9f0;
-  border-bottom-color: #f4f3ef;
+  /* border-bottom-color: #f4f3ef; */
   text-align: center;
   color: #676566;
   font: 300 18px sans-serif;
 }
-thead tr th {
-  display: block;
-  padding: 10px 0;
-}
-thead tr th:first-child {
+
+.product-table thead tr:first-child {
   text-align: left;
-  padding-left: 15px;
 }
-.product-table-row {
-  /* display: block;
-  padding: 5px 0; */
+
+.product-table th,
+td {
+  padding: 10px 10px;
+}
+
+.product-table tbody tr {
   border-bottom: 1px solid #cdc0b2;
 }
-.product-table-row .img-col {
+
+.img-col img {
   display: block;
-  padding: 20px 0;
-  /* width: 50px; */
+  max-width: 100px;
 }
-.product-table-row .name-col {
+
+.img-col img.bar {
   display: block;
-  padding: 10px 0px;
-  text-align: center;
+  max-width: 90px;
+  max-height: 100px;
 }
-.product-table-row .name-col span {
-  display: block;
-  width: 250px;
+
+.name-col {
   text-align: center;
   font: 400 16px sans-serif;
   line-height: 22px;
   color: #676767;
 }
-.product-table-row .price-col span {
-  display: block;
+
+.price-col {
   text-align: center;
   font: 300 17px sans-serif;
   color: #e4b332;
   width: 100px;
 }
-.product-table-row .delete-col .delete-btn {
+
+.delete-col .delete-btn {
   display: block;
   width: 22px;
   height: 22px;
   margin: 0 auto;
   cursor: pointer;
-  background: url(https://www.lindt.co.uk/shop/skin/frontend/new_design/lindt/images/remove_item.png)
-    no-repeat top center;
+  background: url(https://www.lindt.co.uk/shop/skin/frontend/new_design/lindt/images/remove_item.png) no-repeat top center;
   border: 0;
   outline: none;
 }
+
 .product-table-row .delete-col .delete-btn:hover {
   opacity: 0.8;
 }
-.product-table-content td {
-  display: block;
-  padding: 5px 0;
-}
-.img-col img {
-  display: block;
-  width: 77px;
-}
+
 /* PRODUCT TABLE  END*/
 
 /* TABLE CONTROLS BLOCK */
