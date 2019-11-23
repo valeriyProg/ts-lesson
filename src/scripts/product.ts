@@ -1,4 +1,5 @@
 import { IGift } from "./interfaces/gift-interface.ts";
+
 export abstract class Product implements IGift {
   constructor(
     protected _id: string,

@@ -61,6 +61,8 @@ body {
   width: 970px;
   margin: 0px auto;
 }
+
+/* PRODUCT TABLE  */
 .product-table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -75,6 +77,7 @@ thead tr {
 }
 thead tr th {
   display: block;
+  padding: 10px 0;
 }
 thead tr th:first-child {
   text-align: left;
@@ -87,7 +90,7 @@ thead tr th:first-child {
 }
 .product-table-row .img-col {
   display: block;
-  padding: 10px 0;
+  padding: 20px 0;
   /* width: 50px; */
 }
 .product-table-row .name-col {
@@ -128,8 +131,59 @@ thead tr th:first-child {
   display: block;
   padding: 5px 0;
 }
-
 .img-col img {
   display: block;
   width: 77px;
 }
+/* PRODUCT TABLE  END*/
+
+/* TABLE CONTROLS BLOCK */
+.table-controls .update-btn {
+  min-width: 100px;
+  border-radius: 0;
+  text-shadow: none;
+  display: block;
+  text-align: center;
+  width: 215px;
+  padding: 9px 0;
+  text-decoration: none;
+  color: #653008;
+  font: 300 16px "OptimaNovaLt Light", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 2px solid transparent;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f2aa3b),
+    to(#e59e2f)
+  );
+  background-image: linear-gradient(to bottom, #f2aa3b, #e59e2f);
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.15) inset,
+    0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.15) inset,
+    0 2px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.table-controls .update-btn:hover,
+.update-btn:active {
+  text-shadow: none;
+  border: 2px solid #f0ad43;
+  background-color: #df9b30;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#df9b30),
+    to(#f0ad43)
+  );
+  background-image: linear-gradient(to bottom, #df9b30, #f0ad43);
+  outline: none;
+}
+.table-controls .update-btn:active {
+  color: #fff;
+}
+/* TABLE CONTROLS BLOCK  END*/
