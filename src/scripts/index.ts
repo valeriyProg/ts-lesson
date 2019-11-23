@@ -9,7 +9,7 @@ const chocolateBar = new ChocolateBar(
   0.2
 );
 
-const productTable = document.getElementById("product-table");
+// const productTable = document.getElementById("product-table");
 
 // document.getElementById("app").innerHTML = `
 // <h1>Hello World!</h1>
