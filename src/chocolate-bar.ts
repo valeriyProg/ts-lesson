@@ -1,15 +1,13 @@
-import { ICandy } from "./interfaces/candy-interface.ts";
-import { IBag } from "./interfaces/bag-interface.ts";
+import { IGift } from "./interfaces/gift-interface.ts";
 
-export class Bag extends Product implements IBag {
+export class ChocolateBar implements IGift {
   constructor(
     private _id: string,
-    private _name: string,
     private _img: string,
+    private _name: string,
     private _brand: string,
     private _weight: number,
     private _price: number,
-    private _mix: Candy[] = [],
     private _discount: number | null = 0
   ) {}
 
@@ -34,18 +32,4 @@ export class Bag extends Product implements IBag {
   get discount(): number {
     return this.__discount;
   }
-  get mix(): ICandy[] {
-    return this._mix;
-  }
 }
-
-// constructor(
-//     private _id: string,
-//     private _name: string,
-//     private _img: string,
-//     private _brand: string,
-//     private _weight: number,
-//     private _price: number,
-//     private _mix: Candy[] = [],
-//     private _discount: number | null = 0
-//   ) {}
