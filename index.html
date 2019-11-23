@@ -10,8 +10,32 @@
     <main>
       <section class="table-section">
         <div class="container row">
-          <div class="col">Left</div>
-          <div class="col">Right</div>
+          <div class="col product-table-col">
+            <table
+              class="product-table"
+              data-table="product-table"
+              id="product-table"
+            >
+              <tbody class="product-table-content">
+                <tr class="product-table-row row">
+                  <td class="col img-col">
+                    <img src="" alt="" />
+                  </td>
+                  <td class="col name-col">
+                    <span>NAME</span>
+                  </td>
+                  <td class="col price-col">
+                    <span>PRICE</span>
+                  </td>
+                  <td class="col delete-col">
+                    <button>DELETE</button>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot></tfoot>
+            </table>
+          </div>
+          <div class="col product-info-col"></div>
         </div>
       </section>
     </main>

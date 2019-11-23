@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,6 +26,8 @@
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+
+  width: 100%;
 }
 .col {
   display: -webkit-box;
@@ -44,7 +50,11 @@
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+
+  width: 48%;
+  background: red;
 }
+
 .table-section {
   width: 100%;
 }
