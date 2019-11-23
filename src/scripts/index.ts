@@ -13,11 +13,11 @@ const chocolateBar = new ChocolateBar(
 );
 const giftBox = new Bag(
   "AFTR12",
-  "Dark Chocolate 60%",
+  "Pick & Mix Bag",
   "Lindt",
-  13.7,
-  "https://www.lindt.co.uk/shop/media/catalog/product/cache/1/small_image/166x166/9df78eab33525d08d6e5fb8d27136e95/3/0/3046920010603_t1_1.png",
-  94,
+  12.0,
+  "https://www.lindt.co.uk/shop/media/catalog/product/cache/1/thumbnail/68x/9df78eab33525d08d6e5fb8d27136e95/l/i/lindor_pick_and_mix_400g_122x145px.png",
+  400,
   0.2,
   [
     {
@@ -45,25 +45,10 @@ const giftBox = new Bag(
   ]
 );
 const productTableElem = document.getElementById("product-table");
-const productTableBody = document.querySelector(".product-table-content");
+const productTableBody = productTableElem.querySelector(
+  ".product-table-content"
+);
 const productTable = new Table(productTableElem);
 productTable.crateRow(chocolateBar);
+productTable.crateRow(giftBox);
 productTable.crateRow(chocolateBar);
-productTable.crateRow(chocolateBar);
-// let row = Table.crateRow(chocolateBar);
-// productTableBody.appendChild(row);
-// row = Table.crateRow(chocolateBar);
-// productTableBody.appendChild(row);
-
-// productTableBody.
-
-// document.getElementById("app").innerHTML = `
-// <h1>Hello World!</h1>
-// <div>
-//   Look
-//   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>
-//   for more info about Parcel.</br>
-//   ${chocolateBar}
-
-// </div>
-// `;

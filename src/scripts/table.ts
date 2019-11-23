@@ -1,9 +1,10 @@
 import { ChocolateBar } from "./chocolate-bar";
+import { Bag } from "./bag";
 
 export class Table {
   private _tbody: HTMLElement;
   private _rowsCount: number = 0;
-  private _self = this;
+
   constructor(private _table: HTMLElement) {
     this._tbody = this._table.querySelector("tbody");
   }
@@ -13,6 +14,7 @@ export class Table {
     row = document.createElement("tr");
     row.classList.add("product-table-row");
 
+    // IMG COL //
     let imgCol = document.createElement("td");
     imgCol.classList.add("img-col");
     let img = document.createElement("img");
@@ -20,24 +22,32 @@ export class Table {
     img.src = product.img;
     imgCol.appendChild(img);
 
+    // NAME COL //
     let nameCol = document.createElement("td");
     nameCol.classList.add("name-col");
     let name = document.createElement("span");
-    name.innerText = product.brand + " " + product.name;
+    if (product instanceof Bag) {
+      name.innerText =
+        product.brand + " " + product.name + " " + product.weight + "g";
+    } else {
+      name.innerText = product.brand + " " + product.name;
+    }
     nameCol.appendChild(name);
 
+    // PRICE COL //
     let priceCol = document.createElement("td");
     priceCol.classList.add("price-col");
     let price = document.createElement("span");
     price.innerHTML = "&pound; " + product.price;
     priceCol.appendChild(price);
 
+    // DELETE BUTTON COL //
     let deleteCol = document.createElement("td");
     deleteCol.classList.add("delete-col");
     let button = document.createElement("button");
     button.classList.add("delete-btn");
     button.id = "delete-btn";
-    button.dataset.dataPos = this._rowsCount.toString();
+    button.dataset.index = this._rowsCount.toString();
     button.addEventListener(
       "click",
       e => {
@@ -59,13 +69,3 @@ export class Table {
   }
   deleteRow(index, table: HTMLElement): void {}
 }
-
-// <td class="col name-col">
-// <span>Lindt Dark Chocolate 60%</span>
-// </td>
-// <td class="col price-col">
-// <span>&pound;17.50</span>
-// </td>
-// <td class="col delete-col">
-// <button class="delete-btn" id="delete-btn"></button>
-// </td>

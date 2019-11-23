@@ -93,6 +93,7 @@ td {
 .img-col img {
   display: block;
   max-width: 100px;
+  margin: 0 auto;
 }
 
 .img-col img.bar {
@@ -121,7 +122,8 @@ td {
   height: 22px;
   margin: 0 auto;
   cursor: pointer;
-  background: url(https://www.lindt.co.uk/shop/skin/frontend/new_design/lindt/images/remove_item.png) no-repeat top center;
+  background: url(https://www.lindt.co.uk/shop/skin/frontend/new_design/lindt/images/remove_item.png)
+    no-repeat top center;
   border: 0;
   outline: none;
 }
@@ -140,6 +142,7 @@ td {
   display: block;
   text-align: center;
   width: 215px;
+  margin-top: 30px;
   padding: 9px 0;
   text-decoration: none;
   color: #653008;
