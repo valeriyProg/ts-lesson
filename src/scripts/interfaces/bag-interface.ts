@@ -1,5 +1,5 @@
-import { ICandy } from "./candy-interface.ts";
-import { IGift } from "./gift-interface.ts";
+import { ICandy } from "./candy-interface";
+import { IGift } from "./gift-interface";
 
 export interface IBag {
   mix: ICandy[] | null;

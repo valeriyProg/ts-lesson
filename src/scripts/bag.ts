@@ -1,6 +1,6 @@
-import { ICandy } from "./interfaces/candy-interface.ts";
-import { IBag } from "./interfaces/bag-interface.ts";
-import { Product } from "./product.ts";
+import { ICandy } from "./interfaces/candy-interface";
+import { IBag } from "./interfaces/bag-interface";
+import { Product } from "./product";
 
 export class Bag extends Product implements IBag {
   private _mix: ICandy[] = [];
@@ -17,26 +17,26 @@ export class Bag extends Product implements IBag {
     super(id, name, brand, price, img, weight, discount);
     this._mix = mix;
   }
-  id(): string {
-    return this._id;
+  get id(): string {
+    return this.id;
   }
   get img(): string {
-    return this._img;
+    return this.img;
   }
   get name(): string {
-    return this._name;
+    return this.name;
   }
   get brand(): string {
-    return this._brand;
+    return this.brand;
   }
   get weight(): number {
-    return this._weight;
+    return this.weight;
   }
   get price(): number {
-    return this._price;
+    return this.price;
   }
   get discount(): number {
-    return this._discount;
+    return this.discount;
   }
   get mix(): ICandy[] {
     return this._mix;
@@ -45,9 +45,9 @@ export class Bag extends Product implements IBag {
     let mix: string = "";
     this._mix.forEach((element, index) => {
       mix += `Item: #${index}; 
-              Name: ${emelement.name};
-              Brand: ${emelement.brand};
-              Price:${emelement.price}; \n`;
+              Name: ${element.name};
+              Brand: ${element.brand};
+              Price:${element.price}; \n`;
     });
     return `id: ${this.id};
      img: ${this.img}; 

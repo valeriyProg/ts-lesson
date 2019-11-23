@@ -1,4 +1,4 @@
-import { Product } from "./product.ts";
+import { Product } from "./product";
 
 export class ChocolateBar extends Product {
   constructor(
@@ -14,33 +14,33 @@ export class ChocolateBar extends Product {
   }
 
   get id(): string {
-    return this._id;
+    return this.id;
   }
   get img(): string {
-    return this._img;
+    return this.img;
   }
   get name(): string {
-    return this._name;
+    return this.name;
   }
   get brand(): string {
-    return this._brand;
+    return this.brand;
   }
   get weight(): number {
-    return this._weight;
+    return this.weight;
   }
   get price(): number {
-    return this._price;
+    return this.price;
   }
   get discount(): number {
-    return this._discount;
+    return this.discount;
   }
   toString(): string {
-    return `id: ${this._id};
-     img: ${this._img}; 
-     name: ${this._name}; 
-     brand:${this._brand}; 
-     weight: ${this._weight}; 
-     price:${this._price};
-     discount:${this._discount};`;
+    return `id: ${this.id};
+     img: ${this.img}; 
+     name: ${this.name}; 
+     brand:${this.brand}; 
+     weight: ${this.weight}; 
+     price:${this.price};
+     discount:${this.discount};`;
   }
 }

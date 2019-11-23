@@ -1,4 +1,3 @@
-import { Product } from "./product";
 import { ChocolateBar } from "./chocolate-bar";
 
 export class Table {
@@ -38,6 +37,7 @@ export class Table {
 
     return row;
   }
+  static deleteRow(index, table: HTMLElement): void {}
 }
 
 // <td class="col name-col">

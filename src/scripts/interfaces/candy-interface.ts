@@ -1,4 +1,4 @@
-import { IGift } from "./gift-interface.ts";
+import { IGift } from "./gift-interface";
 
 export interface ICandy extends IGift {
   count: number;
