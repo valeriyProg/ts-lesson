@@ -1,19 +1,23 @@
 import { ICandy } from "./interfaces/candy-interface.ts";
 import { IBag } from "./interfaces/bag-interface.ts";
+import { Product } from "./product.ts";
 
 export class Bag extends Product implements IBag {
+  private _mix: ICandy[] = [];
   constructor(
-    private _id: string,
-    private _name: string,
-    private _img: string,
-    private _brand: string,
-    private _weight: number,
-    private _price: number,
-    private _mix: Candy[] = [],
-    private _discount: number | null = 0
-  ) {}
-
-  get id(): string {
+    id: string,
+    name: string,
+    img: string,
+    brand: string,
+    weight: number,
+    price: number,
+    mix: ICandy[] = [],
+    discount: number | null = 0
+  ) {
+    super(id, name, img, brand, weight, price, discount);
+    this._mix = mix;
+  }
+  id(): string {
     return this._id;
   }
   get img(): string {
@@ -36,6 +40,15 @@ export class Bag extends Product implements IBag {
   }
   get mix(): ICandy[] {
     return this._mix;
+  }
+  toString(): string {
+    return `id: ${this.id};
+     img: ${this.img}; 
+     name: ${this.name}; 
+     brand:${this.brand}; 
+     weight: ${this.weight}; 
+     price:${this.price};
+     discount:${this.discount};`;
   }
 }
 

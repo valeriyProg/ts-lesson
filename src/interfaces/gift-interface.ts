@@ -5,5 +5,5 @@ export interface IGift {
   price: number;
   img: string;
   weight: number;
-  discount?: number | null;
+  discount: number | null;
 }
