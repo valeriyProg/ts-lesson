@@ -1,7 +1,12 @@
 import { ChocolateBar } from "./chocolate-bar";
 
 export class Table {
-  static crateRow(product: ChocolateBar): HTMLElement {
+  private _tbody: HTMLElement;
+  constructor(private _table: HTMLElement) {
+    this._tbody = this._table.querySelector("tbody");
+  }
+
+  crateRow(product: ChocolateBar): void {
     let row: HTMLElement;
     row = document.createElement("tr");
     row.classList.add("product-table-row", "row");
@@ -28,6 +33,13 @@ export class Table {
     deleteCol.classList.add("col", "delete-col");
     let button = document.createElement("button");
     button.classList.add("delete-btn");
+    button.addEventListener(
+      "click",
+      () => {
+        this.deleteRow(1, deleteCol);
+      },
+      false
+    );
     deleteCol.appendChild(button);
 
     row.appendChild(imgCol);
@@ -35,9 +47,9 @@ export class Table {
     row.appendChild(priceCol);
     row.appendChild(deleteCol);
 
-    return row;
+    this._table.appendChild(row);
   }
-  static deleteRow(index, table: HTMLElement): void {}
+  deleteRow(index, table: HTMLElement): void {}
 }
 
 // <td class="col name-col">

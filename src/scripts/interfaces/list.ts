@@ -1,5 +1,5 @@
-export interface IList {
-  add(item: Item): void;
-  remove(item: Item): void;
-  indexOf(item: Item): number;
+export interface IList<T> {
+  add(item: T): void;
+  remove(item: T): void;
+  indexOf(item: T): number;
 }
