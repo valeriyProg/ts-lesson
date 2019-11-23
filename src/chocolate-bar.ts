@@ -4,14 +4,13 @@ export class ChocolateBar extends Product {
   constructor(
     id: string,
     name: string,
-    img: string,
     brand: string,
-    weight: number,
     price: number,
-    mix: Candy[] = [],
+    img: string,
+    weight: number,
     discount: number | null = 0
   ) {
-    super(id, name, img, brand, weight, price, discount);
+    super(id, name, brand, price, img, weight, discount);
   }
 
   get id(): string {
@@ -36,12 +35,12 @@ export class ChocolateBar extends Product {
     return this._discount;
   }
   toString(): string {
-    return `id: ${this.id};
-     img: ${this.img}; 
-     name: ${this.name}; 
-     brand:${this.brand}; 
-     weight: ${this.weight}; 
-     price:${this.price};
-     discount:${this.discount};`;
+    return `id: ${this._id};
+     img: ${this._img}; 
+     name: ${this._name}; 
+     brand:${this._brand}; 
+     weight: ${this._weight}; 
+     price:${this._price};
+     discount:${this._discount};`;
   }
 }

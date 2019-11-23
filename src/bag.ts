@@ -7,14 +7,14 @@ export class Bag extends Product implements IBag {
   constructor(
     id: string,
     name: string,
-    img: string,
     brand: string,
-    weight: number,
     price: number,
-    mix: ICandy[] = [],
-    discount: number | null = 0
+    img: string,
+    weight: number,
+    discount: number | null = 0,
+    mix: ICandy[] = []
   ) {
-    super(id, name, img, brand, weight, price, discount);
+    super(id, name, brand, price, img, weight, discount);
     this._mix = mix;
   }
   id(): string {
@@ -59,14 +59,3 @@ export class Bag extends Product implements IBag {
      mux: ${mix}`;
   }
 }
-
-// constructor(
-//     private _id: string,
-//     private _name: string,
-//     private _img: string,
-//     private _brand: string,
-//     private _weight: number,
-//     private _price: number,
-//     private _mix: Candy[] = [],
-//     private _discount: number | null = 0
-//   ) {}
