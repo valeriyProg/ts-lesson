@@ -18,25 +18,25 @@ export class Bag extends Product implements IBag {
     this._mix = mix;
   }
   get id(): string {
-    return this.id;
+    return this._id;
   }
   get img(): string {
-    return this.img;
+    return this._img;
   }
   get name(): string {
-    return this.name;
+    return this._name;
   }
   get brand(): string {
-    return this.brand;
+    return this._brand;
   }
   get weight(): number {
-    return this.weight;
+    return this._weight;
   }
   get price(): number {
-    return this.price;
+    return this._price;
   }
   get discount(): number {
-    return this.discount;
+    return this._discount;
   }
   get mix(): ICandy[] {
     return this._mix;
@@ -49,13 +49,13 @@ export class Bag extends Product implements IBag {
               Brand: ${element.brand};
               Price:${element.price}; \n`;
     });
-    return `id: ${this.id};
-     img: ${this.img}; 
-     name: ${this.name}; 
-     brand:${this.brand}; 
-     weight: ${this.weight}; 
-     price:${this.price};
-     discount:${this.discount};
-     mux: ${mix}`;
+    return `id: ${this._id};
+     img: ${this._img}; 
+     name: ${this._name}; 
+     brand:${this._brand}; 
+     weight: ${this._weight}; 
+     price:${this._price};
+     discount:${this._discount};
+     mix: ${mix}`;
   }
 }

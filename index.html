@@ -3,7 +3,7 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/css/main.css" />
-    <!-- <script src="src/scripts/index.ts"></script> -->
+    <script src="src/scripts/index.ts"></script>
   </head>
 
   <body>
@@ -22,11 +22,29 @@
                   <th colspan="2"><span>Product</span></th>
                   <th><span>Unit Price</span></th>
                   <th></th>
-                  <th></th>
+                  <!-- <th></th> -->
                 </tr>
               </thead>
-              <tbody class="product-table-content">
-                <tr class=" product-table-row">
+              <tbody class="product-table-content"></tbody>
+              <tfoot></tfoot>
+            </table>
+          </div>
+          <div class="col product-info-col">
+            <div class="table-controls">
+              <button class="update-btn">Update Table</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <div id="app"></div>
+
+    <!-- <script src="src/scripts/index.ts"></script> -->
+  </body>
+</html>
+
+<!-- <tr class=" product-table-row">
                   <td class=" img-col">
                     <img
                       class="bar"
@@ -59,7 +77,11 @@
                     <span>&pound;17.50</span>
                   </td>
                   <td class="delete-col">
-                    <button class="delete-btn" id="delete-btn"></button>
+                    <button
+                      class="delete-btn"
+                      id="delete-btn"
+                      data-pos="0"
+                    ></button>
                   </td>
                 </tr>
                 <tr class=" product-table-row">
@@ -79,8 +101,8 @@
                   <td class="delete-col">
                     <button class="delete-btn" id="delete-btn"></button>
                   </td>
-                </tr>
-                <!-- <tr class="product-table-row row">
+                </tr> -->
+<!-- <tr class="product-table-row row">
                   <td class="col img-col">
                     <img
                       src="https://www.lindt.co.uk/shop/media/catalog/product/cache/1/small_image/166x166/9df78eab33525d08d6e5fb8d27136e95/3/0/3046920010603_t1_1.png"
@@ -131,21 +153,3 @@
                     <button class="delete-btn" id="delete-btn"></button>
                   </td>
                 </tr> -->
-              </tbody>
-              <tfoot></tfoot>
-            </table>
-          </div>
-          <div class="col product-info-col">
-            <div class="table-controls">
-              <button class="update-btn">Update Table</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
-    <div id="app"></div>
-
-    <!-- <script src="src/scripts/index.ts"></script> -->
-  </body>
-</html>

@@ -47,6 +47,9 @@ const giftBox = new Bag(
 const productTableElem = document.getElementById("product-table");
 const productTableBody = document.querySelector(".product-table-content");
 const productTable = new Table(productTableElem);
+productTable.crateRow(chocolateBar);
+productTable.crateRow(chocolateBar);
+productTable.crateRow(chocolateBar);
 // let row = Table.crateRow(chocolateBar);
 // productTableBody.appendChild(row);
 // row = Table.crateRow(chocolateBar);

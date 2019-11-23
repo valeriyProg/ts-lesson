@@ -14,25 +14,25 @@ export class ChocolateBar extends Product {
   }
 
   get id(): string {
-    return this.id;
+    return this._id;
   }
   get img(): string {
-    return this.img;
+    return this._img;
   }
   get name(): string {
-    return this.name;
+    return this._name;
   }
   get brand(): string {
-    return this.brand;
+    return this._brand;
   }
   get weight(): number {
-    return this.weight;
+    return this._weight;
   }
   get price(): number {
-    return this.price;
+    return this._price;
   }
   get discount(): number {
-    return this.discount;
+    return this._discount;
   }
   toString(): string {
     return `id: ${this.id};
