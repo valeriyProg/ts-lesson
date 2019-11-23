@@ -90,6 +90,9 @@ td {
   border-bottom: 1px solid #cdc0b2;
 }
 
+.hide {
+  display: none;
+}
 .img-col img {
   display: block;
   max-width: 100px;

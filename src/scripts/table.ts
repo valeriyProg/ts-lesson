@@ -1,5 +1,5 @@
-import { ChocolateBar } from "./chocolate-bar";
 import { Bag } from "./bag";
+import { Product } from "./product";
 
 export class Table {
   private _tbody: HTMLElement;
@@ -9,10 +9,17 @@ export class Table {
     this._tbody = this._table.querySelector("tbody");
   }
 
-  crateRow(product: ChocolateBar): void {
+  crateRow(product: Product): void {
+    // HIDE DEFAULT EMPTY ROW
+    if (this._rowsCount === 0) {
+      if (!this._tbody.children[0].classList.contains("hide")) {
+        this._tbody.children[0].classList.add("hide");
+      }
+    }
     let row: HTMLElement;
     row = document.createElement("tr");
     row.classList.add("product-table-row");
+    row.dataset.index = this._rowsCount.toString();
 
     // IMG COL //
     let imgCol = document.createElement("td");
@@ -51,8 +58,9 @@ export class Table {
     button.addEventListener(
       "click",
       e => {
-        // this.deleteRow(1, deleteCol);
-        console.log(this);
+        let btn = e.target as HTMLElement;
+        this.deleteRow(+btn.dataset.index, this._tbody);
+        // console.log(0, this._tbody);
       },
       false
     );
@@ -67,5 +75,14 @@ export class Table {
     this._tbody.appendChild(row);
     this._rowsCount++;
   }
-  deleteRow(index, table: HTMLElement): void {}
+  deleteRow(index: number, context: HTMLElement): void {
+    let currentRow = context.querySelector(`[data-index="${index}"]`);
+    let currentRowIndex = [].indexOf.call(context.children, currentRow);
+    context.removeChild(context.children[currentRowIndex]);
+    this._rowsCount--;
+    // SHOW DEFAULT EMPTY ROW
+    if (this._rowsCount === 0) {
+      this._tbody.children[0].classList.remove("hide");
+    }
+  }
 }
